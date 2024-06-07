@@ -30,11 +30,15 @@ public class CheckoutSolution {
                     break;
 
                 case 'C':
+                case 'G':
+                case 'T':
+                case 'W':
                     totalC ++;
                     total += 20;
                     break;
 
                 case 'D':
+                case 'M':
                     totalD ++;
                     total += 15;
                     break;
@@ -74,6 +78,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
