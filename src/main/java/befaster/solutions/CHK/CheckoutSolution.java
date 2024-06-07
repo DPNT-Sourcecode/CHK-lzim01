@@ -11,12 +11,15 @@ public class CheckoutSolution {
                     totalA ++;
                     if(totalA % 5 == 0){
                         total += 20;
-                    }
-                    else if(totalA % 3 == 0){
-                        total += 30;
+                        totalA -= 5;
                     }
                     else{
-                        total += 50;
+                        if(totalA % 3 == 0){
+                        total += 30;
+                        }
+                        else{
+                            total += 50;
+                        }
                     }
                     break;
             
@@ -55,6 +58,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
