@@ -7,7 +7,8 @@ public class CheckoutSolution {
         int i, total = 0, totalA = 0, totalB = 0, sumB =0 , totalC = 0;
         int totalD = 0, totalE = 0, freeB = 0;
         int totalF = 0, freeF = 0, contor = 0;
-        int totalH = 0, totalK = 0, totalN = 0, totalM = 0, freeM = 0;
+        int totalH = 0, totalK = 0, totalN = 0, totalM = 0, freeM = 0, totalP = 0, totalQ = 0;
+        int freeQ = 0, totalR = 0;
         for(i = 0; i < skus.length(); i++){
             switch (skus.charAt(i)) {
                 case 'A':
@@ -113,13 +114,35 @@ public class CheckoutSolution {
                     if(totalN % 3 == 0){
                         freeM ++;
                     }
+                    break;
 
                 case 'O':
                     total += 10;
+                    break;
 
                 case 'P':
                     totalP ++;
-                    if(totalP %5 != 0)
+                    if(totalP %5 != 0){
+                        total += 50;
+                    }
+                    break;
+
+                case 'Q':
+                    totalQ ++;
+                    if(totalP %3 == 0){
+                        total += 20;
+                    }
+                    else{
+                        total += 30;
+                    }
+                    break;
+
+                case 'R':
+                    totalR ++;
+                    total += 50;
+                    if(totalR % 3 == 0){
+                        freeQ ++;
+                    }
 
                 default:
                     return -1;
@@ -137,7 +160,15 @@ public class CheckoutSolution {
         else{
             totalM -= totalM * 15;
         }
+
+        if(freeQ >= totalQ){
+            total -= freeQ * 15;
+        }
+        else{
+            totalQ -= totalQ * 15;
+        }
         return total;
     }
 }
+
 
