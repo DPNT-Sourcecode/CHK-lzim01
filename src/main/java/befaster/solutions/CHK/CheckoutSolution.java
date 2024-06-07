@@ -64,12 +64,13 @@ public class CheckoutSolution {
             if(totalB > freeB){
                 totalB -= freeB;
                 total = total - freeB * 30;
-                total = totalB * 30 
+                total += totalB * 30 - totalB/2 * 15;
             }        
         }
         return total;
     }
 }
+
 
 
 
