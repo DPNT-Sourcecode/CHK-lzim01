@@ -9,18 +9,32 @@ public class CheckoutSolution {
             switch (skus.charAt(i)) {
                 case 'A':
                     totalA ++;
-                    if(totalA == 3){
-                        total = total - 150 + 130;
+                    if(totalA % 3 == 0){
+                        total += 30;
+                    }
+                    else{
+                        total += 50;
                     }
                     break;
             
                 case 'B':
+                    totalB ++;
+                    if(totalB % 2 == 0){
+                        total += 15;
+                    }
+                    else{
+                        totalB += 30;
+                    }
                     break;
 
                 case 'C':
+                    totalC ++;
+                    total += 20;
                     break;
 
                 case 'D':
+                    totalD ++;
+                    total += 15;
                     break;
 
                 default:
@@ -30,5 +44,6 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
