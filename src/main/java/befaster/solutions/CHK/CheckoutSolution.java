@@ -24,8 +24,11 @@ public class CheckoutSolution {
                     break;
             
                 case 'B':
-                    if(freeB == 1){
-                        freeB = 0;
+                    if(freeB > 0){
+                        freeB --;
+                        if(totalB > 0){
+                            
+                        }
                     }
                     else{
                         totalB ++;
@@ -53,8 +56,7 @@ public class CheckoutSolution {
                     totalE ++;
                     total += 40;
                     if(totalE % 2 == 0){
-                        totalB ++;
-                        freeB = 1;
+                        freeB ++;
                     }
                     break;
                 
@@ -65,6 +67,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
