@@ -50,8 +50,12 @@ public class CheckoutSolution {
             }
         }
         totalB -= freeB;
+        if(totalB < 0){
+            totalB = 0;
+        }
         total += totalB * 30 - totalB/2 * 15;      
         return total;
     }
 }
+
 
