@@ -55,11 +55,18 @@ public class CheckoutSolution {
             }
         }
         if(freeB > 0){
-            total = total - (totalB - freeB) * 30 + (totalB - freeB)/2 
+            if(total > freeB){
+                total = total - (totalB - freeB) * 30 + (totalB - freeB) / 2 * 15;
+            }
+            else{
+                total = total - totalB * 30 + totalB / 2 * 15;
+            }
+            
         }
         return total;
     }
 }
+
 
 
 
