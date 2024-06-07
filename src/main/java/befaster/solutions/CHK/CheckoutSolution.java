@@ -10,19 +10,20 @@ public class CheckoutSolution {
                 case 'A':
                     totalA ++;
                     // if totalA % 5 == 0, fifth one is free
-                    if(totalA % 5 != 0){
-                        if(totalA % 3 == 0){
-                            total += 30;
-                        }
-                        else{
-                            total += 50;
-                        }
+                    if(totalA == 5){
+                        total += 20;
+                    }
+                    if(totalA == 3){
+                        total += 30;
+                    }
+                    else{
+                        total += 50;
                     }
                     break;
             
                 case 'B':
                     totalB ++;
-                    if(totalB % 2 == 0){
+                    if(totalB == 2){
                         total += 15;
                     }
                     else{
@@ -43,7 +44,7 @@ public class CheckoutSolution {
                 case 'E':
                     totalE ++;
                     total += 40;
-                    if(totalE % 2 == 0){
+                    if(totalE == 2){
                         totalB ++;
                     }
                     break;
@@ -55,5 +56,6 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
