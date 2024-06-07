@@ -7,6 +7,7 @@ public class CheckoutSolution {
         int i, total = 0, totalA = 0, totalB = 0, sumB =0 , totalC = 0;
         int totalD = 0, totalE = 0, freeB = 0;
         int totalF = 0, freeF = 0, contor = 0;
+        int totalH = 0;
         for(i = 0; i < skus.length(); i++){
             switch (skus.charAt(i)) {
                 case 'A':
@@ -24,7 +25,23 @@ public class CheckoutSolution {
                         }
                     }
                     break;
-            
+                
+                case 'H':
+                    totalH ++;
+                    if(totalH % 10 == 0){
+                        total -= 5;
+                        totalH = 0;
+                    }
+                    else{
+                        if(totalH % 5 == 0){
+                        total += 5;
+                        }
+                        else{
+                            total += 10;
+                        }
+                    }
+                break;    
+
                 case 'B':
                     totalB ++;
                     break;
@@ -62,9 +79,13 @@ public class CheckoutSolution {
                             contor = 1;
                         }
                     }
-                    
                     break;
+                
+                case 'I':
+                    total += 35;
 
+                case 'J':
+                    total += 60;
                 default:
                     return -1;
             }
@@ -78,6 +99,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
