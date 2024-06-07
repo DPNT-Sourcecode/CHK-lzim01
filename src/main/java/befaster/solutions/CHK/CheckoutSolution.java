@@ -9,10 +9,10 @@ public class CheckoutSolution {
             switch (skus.charAt(i)) {
                 case 'A':
                     totalA ++;
-                    if(totalA == 5){
+                    if(totalA % 5 == 0){
                         total += 20;
                     }
-                    else if(totalA == 3){
+                    else if(totalA % 3 == 0){
                         total += 30;
                     }
                     else{
@@ -22,7 +22,7 @@ public class CheckoutSolution {
             
                 case 'B':
                     totalB ++;
-                    if(totalB == 2){
+                    if(totalB % 2 == 0){
                         total += 15;
                     }
                     else{
@@ -43,7 +43,7 @@ public class CheckoutSolution {
                 case 'E':
                     totalE ++;
                     total += 40;
-                    if(totalE == 2){
+                    if(totalE % 2 == 0){
                         totalB ++;
                     }
                     break;
@@ -55,6 +55,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
