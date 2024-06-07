@@ -24,14 +24,12 @@ public class CheckoutSolution {
                     break;
             
                 case 'B':
+                    totalB ++;
                     if(freeB > 0){
                         freeB --;
-                        if(totalB > 0){
-                            
-                        }
                     }
                     else{
-                        totalB ++;
+                        
                         if(totalB % 2 == 0){
                             total += 15;
                         }
@@ -67,12 +65,3 @@ public class CheckoutSolution {
         return total;
     }
 }
-
-
-
-
-
-
-
-
-
