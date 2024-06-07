@@ -26,7 +26,6 @@ public class CheckoutSolution {
                 case 'B':
                     totalB ++;
                     if(freeB > 0){
-                        total = total - totalB * 30 + totalB/2 * 15;
                         totalB -= freeB;
                         total = total + totalB * 30 - totalB/2 * 15;
                         totalB += freeB;
@@ -69,5 +68,6 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
