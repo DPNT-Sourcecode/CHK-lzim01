@@ -56,7 +56,7 @@ public class CheckoutSolution {
             }
         }
         if(freeB > 0){
-            if(total > freeB){
+            if(totalB > freeB){
                 total = total - (totalB - freeB) * 30 + (totalB - freeB) / 2 * 15;
             }
             else{
@@ -67,6 +67,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
