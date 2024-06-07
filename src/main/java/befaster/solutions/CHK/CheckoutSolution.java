@@ -4,7 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        int i, total = 0, totalA = 0, totalB = 0, totalC = 0, totalD = 0, totalE = 0;
+        int i, total = 0, totalA = 0, totalB = 0, totalC = 0, totalD = 0, totalE = 0, freeB = 0;
         for(i = 0; i < skus.length(); i++){
             switch (skus.charAt(i)) {
                 case 'A':
@@ -24,13 +24,19 @@ public class CheckoutSolution {
                     break;
             
                 case 'B':
-                    totalB ++;
-                    if(totalB % 2 == 0){
-                        total += 15;
+                    if(freeB == 1){
+                        freeB = 0;
                     }
                     else{
-                        total += 30;
+                        totalB ++;
+                        if(totalB % 2 == 0){
+                            total += 15;
+                        }
+                        else{
+                            total += 30;
+                        }
                     }
+                    
                     break;
 
                 case 'C':
@@ -48,6 +54,7 @@ public class CheckoutSolution {
                     total += 40;
                     if(totalE % 2 == 0){
                         totalB ++;
+                        freeB = 1;
                     }
                     break;
                 
@@ -58,6 +65,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
