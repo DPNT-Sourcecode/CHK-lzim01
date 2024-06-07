@@ -24,6 +24,7 @@ public class CheckoutSolution {
                     break;
             
                 case 'B':
+                    totalB ++;
                     if(totalB % 2 == 0){
                         total += 15;
                     }
@@ -66,6 +67,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
