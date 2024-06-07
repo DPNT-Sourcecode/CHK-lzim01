@@ -23,7 +23,7 @@ public class CheckoutSolution {
                         total += 15;
                     }
                     else{
-                        totalB += 30;
+                        total += 30;
                     }
                     break;
 
@@ -44,6 +44,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
