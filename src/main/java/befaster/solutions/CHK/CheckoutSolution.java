@@ -11,7 +11,7 @@ public class CheckoutSolution {
                     totalA ++;
                     if(totalA % 5 == 0){
                         total += 20;
-                        totalA -= 5;
+                        totalA = 0;
                     }
                     else{
                         if(totalA % 3 == 0){
@@ -58,6 +58,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
