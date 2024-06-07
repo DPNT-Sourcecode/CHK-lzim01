@@ -148,7 +148,7 @@ public class CheckoutSolution {
                     }
                     else{
                         totalU ++;
-                        if(totalU % 2 == 0){
+                        if(totalU % 3 == 0){
                             freeU ++;
                             contorU = 1;
                         }
@@ -161,8 +161,8 @@ public class CheckoutSolution {
                         total += 40;
                         totalV = 0;
                     }
-                    else if(totalV == 2){
-                        total += 90;
+                    else if(totalV % 2 == 0){
+                        total += 40;
                     }
                     else{
                         total +=50;
@@ -203,6 +203,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
