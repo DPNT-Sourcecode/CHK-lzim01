@@ -9,11 +9,10 @@ public class CheckoutSolution {
             switch (skus.charAt(i)) {
                 case 'A':
                     totalA ++;
-                    // if totalA % 5 == 0, fifth one is free
                     if(totalA == 5){
                         total += 20;
                     }
-                    if(totalA == 3){
+                    else if(totalA == 3){
                         total += 30;
                     }
                     else{
@@ -56,6 +55,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
