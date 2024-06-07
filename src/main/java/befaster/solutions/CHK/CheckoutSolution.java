@@ -187,6 +187,7 @@ public class CheckoutSolution {
         }
         total += totalB * 30 - totalB/2 * 15;     
         total += totalF * 10;
+        total += totalU * 40;
         if(freeM >= totalM){
             total -= freeM * 15;
         }
@@ -202,6 +203,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
