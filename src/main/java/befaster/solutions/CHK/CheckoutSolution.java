@@ -51,7 +51,6 @@ public class CheckoutSolution {
                 case 'G':
                 case 'T':
                 case 'W':
-                    totalC ++;
                     total += 20;
                     break;
 
@@ -129,12 +128,6 @@ public class CheckoutSolution {
 
                 case 'Q':
                     totalQ ++;
-                    if(totalP %3 == 0){
-                        total += 20;
-                    }
-                    else{
-                        total += 30;
-                    }
                     break;
 
                 case 'R':
@@ -142,6 +135,21 @@ public class CheckoutSolution {
                     total += 50;
                     if(totalR % 3 == 0){
                         freeQ ++;
+                    }
+
+                case 'S':
+                    total += 30;
+
+                case 'U':
+                    if(contorU == 1){
+                        contorU = 0;
+                    }
+                    else{
+                        totalU ++;
+                        if(totalU % 2 == 0){
+                            freeU ++;
+                            contorU = 1;
+                        }
                     }
 
                 default:
@@ -161,14 +169,14 @@ public class CheckoutSolution {
             totalM -= totalM * 15;
         }
 
-        if(freeQ >= totalQ){
-            total -= freeQ * 15;
+        totalQ -= freeQ;
+        if(totalQ < 0){
+            totalQ = 0;
         }
-        else{
-            totalQ -= totalQ * 15;
-        }
+        total += totalQ * 30 - totalB/3 * 10;     
         return total;
     }
 }
+
 
 
