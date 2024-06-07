@@ -41,7 +41,7 @@ public class CheckoutSolution {
                             total += 10;
                         }
                     }
-                break;    
+                    break;    
 
                 case 'B':
                     totalB ++;
@@ -136,9 +136,11 @@ public class CheckoutSolution {
                     if(totalR % 3 == 0){
                         freeQ ++;
                     }
+                    break;
 
                 case 'S':
                     total += 30;
+                    break;
 
                 case 'U':
                     if(contorU == 1){
@@ -151,6 +153,7 @@ public class CheckoutSolution {
                             contorU = 1;
                         }
                     }
+                    break;
 
                 case 'V':
                     totalV ++;
@@ -164,12 +167,15 @@ public class CheckoutSolution {
                     else{
                         total +=50;
                     }
+                    break;
 
                 case 'Y':
                     total += 10;
+                    break;
 
                 case 'Z':
                     total += 50;
+                    break;
 
                 default:
                     return -1;
@@ -196,6 +202,7 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
 
 
