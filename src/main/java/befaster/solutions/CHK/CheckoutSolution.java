@@ -69,10 +69,12 @@ public class CheckoutSolution {
         if(totalB < 0){
             totalB = 0;
         }
-        total += totalB * 30 - totalB/2 * 15;      
+        total += totalB * 30 - totalB/2 * 15;     
+        total += totalF * 10; 
         return total;
     }
 }
+
 
 
 
