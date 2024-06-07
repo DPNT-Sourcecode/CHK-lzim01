@@ -46,7 +46,8 @@ public class CheckoutSolution {
                     if(totalE % 2 == 0){
                         totalB ++;
                     }
-
+                    break;
+                
                 default:
                     return -1;
             }
@@ -54,4 +55,5 @@ public class CheckoutSolution {
         return total;
     }
 }
+
 
