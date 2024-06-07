@@ -24,23 +24,12 @@ public class CheckoutSolution {
                     break;
             
                 case 'B':
-                    totalB ++;
-                    if(freeB > 0){
-                        totalB -= freeB;
-                        total = total + totalB * 30 - totalB/2 * 15;
-                        totalB += freeB;
-                        freeB = 0;
+                    if(totalB % 2 == 0){
+                        total += 15;
                     }
                     else{
-                        
-                        if(totalB % 2 == 0){
-                            total += 15;
-                        }
-                        else{
-                            total += 30;
-                        }
+                        total += 30;
                     }
-                    
                     break;
 
                 case 'C':
@@ -65,9 +54,13 @@ public class CheckoutSolution {
                     return -1;
             }
         }
+        if(freeB > 0){
+            total = total - (totalB - freeB) * 30 + (totalB - freeB)/2 
+        }
         return total;
     }
 }
+
 
 
 
